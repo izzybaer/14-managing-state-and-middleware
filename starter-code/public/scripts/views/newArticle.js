@@ -4,7 +4,8 @@ var app = app || {};
 (function(module) {
   const newArticle = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // COMMENTDONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // This function is creating a form for a new article, and initiates a new article page, it is invoked in this file, newArticle.js. It doesn't call or invoke any other functions. We think that this function calls newArticle.create and newArticle.submit which are event handlers on lines 15 and 16. newArticle.create lives on line 19 and newArticle.submit lives on line 44.
   newArticle.initNewArticlePage = function() {
     $('.tab-content').show();
     $('#export-field').hide();
