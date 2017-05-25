@@ -4,8 +4,9 @@ var app = app || {};
 (function(module) {
   const articleController = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // COMMENTDONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
   // (put your response in a comment here)
+  //This is a callback function that is invoking app.articleView.index with ctx.articles passed in (passing in all the articles) and returning its value. This function is being invoked on several different lines in routes.js.
   articleController.index = (ctx) => app.articleView.index(ctx.articles);
 
   // REVIEW: Middleware for grabbing one article by ID:
@@ -15,8 +16,9 @@ var app = app || {};
       next();
     };
 
-    // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+    // COMMENTDONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
     // (put your response in a comment here)
+    // This function lets us grab the articles using a field/value combo that is passed in, and it is called on line 22, 32, 42 of articleController.js. It is invoking articleData on line 22 of this file.
     app.Article.findWhere('article_id', ctx.params.article_id, articleData);
   };
 
